@@ -45,7 +45,7 @@ Before refactoring the code, I began by copying the code that was needed to crea
          If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
             tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
 	    '3d Increase the tickerIndex.
-	    tickerIndex = tickerIndex + 1
+	    	tickerIndex = tickerIndex + 1
          End If
 
             
