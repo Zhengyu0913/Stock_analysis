@@ -1,5 +1,5 @@
 # Stock Analysis With Excel VBA
-Click here to view the Excel file: [VBA Challenge - Stock Analysis](https://github.com/caseychen3605/stock-analysis/blob/master/VBA_Challenge.xlsm)
+Click here to view the Excel file: [VBA Challenge - Stock Analysis](https://github.com/Zhengyu0913/Stock_analysis/blob/main/VBA_Challenge.xlsm)
 
 ## Overview of Project
 ### Purpose
@@ -16,9 +16,9 @@ Before refactoring the code, I began by copying the code that was needed to crea
     tickerIndex = 0
 
     '1b) Create three output arrays
-    Dim tickerVolumes(12) As Long
-    Dim tickerStartingPrices(12) As Single
-    Dim tickerEndingPrices(12) As Single
+    Dim tickerVolumes(11) As Long
+    Dim tickerStartingPrices(11) As Single
+    Dim tickerEndingPrices(11) As Single
     
     ''2a) Create a for loop to initialize the tickerVolumes to zero.
     ' If the next row’s ticker doesn’t match, increase the tickerIndex.
@@ -44,13 +44,11 @@ Before refactoring the code, I began by copying the code that was needed to crea
         'If  Then
          If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
             tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
+	    '3d Increase the tickerIndex.
+	    tickerIndex = tickerIndex + 1
          End If
 
-            '3d Increase the tickerIndex.
-             If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex) Then
-                tickerIndex = tickerIndex + 1
-            End If
-    
+            
     Next i
     
     '4) Loop through your arrays to output the Ticker, Total Daily Volume, and Return.
@@ -70,6 +68,6 @@ Refactoring helps make our code cleaner and more organized. A few advantages of 
 ### The Advantages of Refactoring Stock Analysis
 The biggest benefit that occurred as a result of the refactoring was an decrease in macro run time. The original analysis took approximately one second to run, whereas our new analysis only took about a four of the time (approximately 0.25 seconds) to run. Attached below are the screenshots that indicate the run time for our new analysis.
 
-![VBA 2017 Screenshot](https://github.com/caseychen3605/stock-analysis/blob/master/Resources/VBA_Challenge_2017.PNG)
+![VBA 2017 Screenshot](https://https://github.com/Zhengyu0913/Stock_analysis/tree/main/Resource/VBA_Challenge_2017.PNG)
 
-![VBA 2018 Screenshot](https://github.com/caseychen3605/stock-analysis/blob/master/Resources/VBA_Challenge_2018.PNG)
+![VBA 2018 Screenshot](https://https://github.com/Zhengyu0913/Stock_analysis/tree/main/Resource/VBA_Challenge_2018.PNG)
